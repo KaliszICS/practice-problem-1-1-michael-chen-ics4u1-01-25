@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class PracticeProblem {
 
 	public static void main(String args[]) {
@@ -6,6 +8,7 @@ public class PracticeProblem {
 
 	public static void q1() {
 		//Write question 1 code here
+		
 	}
 
 	public static void q2() {
@@ -24,4 +27,25 @@ public class PracticeProblem {
 		//Write question 5 code here
 	}
 
+	public static int sum2D(int[][] a) {
+		int sum = 0;
+		for (int[] i : a) {
+			for (int j : i) {
+				sum += j;
+			}
+		}
+		return sum;
+	}
+
+	public static int sumRow(int[][] a, int b) {
+		return Arrays.stream(a[b]).sum();
+	}
+
+	public static int sumColumn(int[][] a, int b) {
+		int sum = 0;
+		for (int[] i : a) {
+			sum += i[b];
+		}
+		return sum;
+	}
 }
